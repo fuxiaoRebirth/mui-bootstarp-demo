@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<script src="assets/mui/js/mui.min.js"></script>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/category.css">
+
+</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<a class="mui-action-back mui-icon mui-icon-search mui-pull-right"></a>
+		<h1 class="mui-title">分类页面</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab f ooter">
+		<a class="mui-tab-item mui-active" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="category.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html">
+			<span class="mui-icon iconfont icon-gouwuche"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+	</nav>
+	<div class="my-content">
+		<div class="c_Left">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="links">
+						<!-- <a href="javascript:;" class="active">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a>
+						<a href="javascript:;">付潇付</a><a href="javascript:;">付潇付</a><a href="javascript:;">付潇付</a><a href="javascript:;">付潇付</a><a
+						 href="javascript:;">付潇付</a><a href="javascript:;">付潇付</a><a href="javascript:;">付潇付</a><a href="javascript:;">付潇付</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="c_right">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="brand_list">
+						<!-- <li>
+							<a href="javascript:;">
+								<img src="./images/brand1.png" alt="">
+								<p>耐克</p>
+							</a>
+						</li> -->
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="tmp">
+		{{each rows}}
+		<a href="javascript:;" data-id="{{$value['id']}}">{{$value.categoryName}}</a>
+		{{/each}}
+	</script>
+	<script type="text/template" id="tmpl">
+		{{each rows}}
+		<li>
+			<a href="javascript:;">
+				<img src="{{$value['brandLogo']}}" alt="">
+				<p>{{$value['brandName']}}</p>
+			</a>
+		</li>
+		{{/each}}
+
+		{{if(rows.length==0)}}
+		<div>暂无数据</div>
+		{{/if}}
+	</script>
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="./assets/artTemplate/template-web.js"></script>
+	<script src="./js/category.js"></script>
+</body>
+
+</html>
