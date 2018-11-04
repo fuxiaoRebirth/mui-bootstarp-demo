@@ -9,6 +9,9 @@
 	<script src="assets/mui/js/mui.min.js"></script>
 	<link rel="stylesheet" href="./css/base.css">
 	<link rel="stylesheet" href="./css/search_result.css">
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="./assets/artTemplate/template-web.js"></script>
+	<script src="./js/search_result.js"></script>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		<h1 class="mui-title">搜索结果</h1>
 	</header>
-	<nav class="mui-bar mui-bar-tab f ooter">
+	<nav class="mui-bar mui-bar-tab footer">
 		<a class="mui-tab-item mui-active" href="index.html">
 			<span class="mui-icon mui-icon-home"></span>
 			<span class="mui-tab-label">首页</span>
@@ -34,63 +37,51 @@
 			<span class="mui-tab-label">会员中心</span>
 		</a>
 	</nav>
-	<div class="mui-content product">
-		<div class="allSales">
-			<span class="price">价格
-				<span class="mui-icon mui-icon-arrowdown"></span>
-			</span>
-
-			<span class="sales ">销量
-				<span class="mui-icon mui-icon-arrowdown"></span>
-			</span>
+	<div class="content" id="refreshContainer">
+		<div class="contain">
+			<div class="allSales">
+				<span >价格
+					<span class="mui-icon mui-icon-arrowdown price"></span>
+				</span>
+				
+				<span>销量
+					<span class="mui-icon mui-icon-arrowdown sales"></span>
+				</span>
+				
+			</div>
+			<div class="product">
+				<ul class="mui-clearfix" id="productBox">
+					<!-- <li>
+					<a href="javascript:;">
+						<img src="images/product.jpg">
+						<p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+						<p>
+							<span>¥560.00</span>
+							<span>¥888.00</span>
+						</p>
+						<button class="buy-now">立即购买</button>
+					</a>
+				</li>
+				 -->
+				</ul>
+			</div>
 		</div>
-		<ul class="list mui-clearfix">
-			<li>
-				<a href="#">
-					<img src="images/product.jpg">
-					<p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
-					<p>
-						<span>¥560.00</span>
-						<span>¥888.00</span>
-					</p>
-					<button class="buy-now">立即购买</button>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/product.jpg">
-					<p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
-					<p>
-						<span>¥560.00</span>
-						<span>¥888.00</span>
-					</p>
-					<button class="buy-now">立即购买</button>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/product.jpg">
-					<p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
-					<p>
-						<span>¥560.00</span>
-						<span>¥888.00</span>
-					</p>
-					<button class="buy-now">立即购买</button>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/product.jpg">
-					<p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
-					<p>
-						<span>¥560.00</span>
-						<span>¥888.00</span>
-					</p>
-					<button class="buy-now">立即购买</button>
-				</a>
-			</li>
-		</ul>
 	</div>
+	<script type="text/template" id="tmp">
+		{{each data}}
+		<li>
+			<a href="javascript:;">
+				<img src="{{$value.pic[0].picAddr}}">
+				<p>{{$value.proName}}</p>
+				<p>
+					<span>¥{{$value.price}}</span>
+					<span>¥{{$value.oldPrice}}</span>
+				</p>
+				<button class="buy-now">立即购买</button>
+			</a>
+		 </li>
+		 {{/each}} 
+	 </script>
 </body>
 
 </html>

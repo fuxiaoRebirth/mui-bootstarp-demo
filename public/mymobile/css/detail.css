@@ -1,0 +1,75 @@
+.mui-content img {
+  display: block;
+}
+.mui-content .product-title {
+  font-size: 16px;
+  padding: 10px;
+}
+.mui-content .price-box {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.mui-content .price-box span:nth-of-type(2) {
+  font-size: 24px;
+  color: #ea543d;
+}
+.mui-content .price-box span:nth-of-type(3) {
+  color: #ccc;
+  text-decoration: line-through;
+}
+.mui-content .size {
+  padding: 10px;
+  font-size: 14px;
+}
+.mui-content .size span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mui-content .product-num {
+  padding: 10px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+}
+.mui-content .product-num .num {
+  line-height: 28px;
+  float: left;
+  margin-right: 5px;
+}
+.mui-content .product-num .select-num {
+  float: left;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 10px;
+}
+.mui-content .product-num .select-num span:first-of-type {
+  float: left;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+.mui-content .product-num .select-num input {
+  float: left;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+.mui-content .product-num .select-num span:last-of-type {
+  float: left;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+.mui-content .product-num .shengyu {
+  float: left;
+  line-height: 28px;
+}
