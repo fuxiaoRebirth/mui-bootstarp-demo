@@ -105,15 +105,11 @@ $(function(){
 					setTimeout(function(){
 						location.href = "adress.html";
 					},2000)
-
 				}
-
 			}
 		})
 
-
 	});
-
-
-
 });
+
+

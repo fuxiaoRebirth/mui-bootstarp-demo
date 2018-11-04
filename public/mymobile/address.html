@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="assets/mui/css/iconfont.css">
+	<link rel="stylesheet" href="css/base.css">
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/artTemplate/template-web.js"></script>
+	<script src="js/publick.js"></script>
+	<script src="js/address.js"></script>
+</head>
+<style>
+	.addAddress{
+		text-align: center;
+		margin-top: 0px; 
+	}
+	.mui-content>.mui-table-view:first-child{
+		margin-top: 0px
+	}
+</style>
+
+<body>
+	<header class="mui-bar mui-bar-nav header">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">收获地址管理</h1>
+		<a class="mui-icon mui-icon-search mui-pull-right"></a>
+	</header>
+	<nav class="mui-bar mui-bar-tab footer">
+		<a class="mui-tab-item" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="category.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html">
+			<span class="mui-icon iconfont icon-gouwuche"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item mui-active" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+	</nav>
+	<div class="mui-content">
+		<ul class="mui-table-view addAddress">
+			<li class="mui-table-view-cell mui-media" id="addAddress">
+				<a href="addAddress.html?isEdi=0">
+					添加收货地址
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view" id="addressBox">
+			<!-- <li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<div class="mui-media-body">
+						邮 编:1
+						收货人:1
+						<p class='mui-ellipsis'>北京市北京市东城区1</p>
+					</div>
+				</a>
+			</li> -->
+		</ul>
+	</div>
+	<script type="text/template" id="tpl">
+		{{each result}}
+		<li class="mui-table-view-cell mui-media">
+				<div class="mui-slider-right mui-disabled ">
+						<a href="javascript:;" class="mui-btn mui-btn-blue" data-id={{$value.id}} id= "edi-btn">编辑</a>
+						<a class="mui-btn mui-btn-red" id= "del-btn"  data-id={{$value.id}}>删除</a>
+				</div>				
+					<div class="mui-media-body mui-slider-handle">
+						邮 编:{{$value.postCode}}
+						收货人:{{$value.recipients}}
+						<p class='mui-ellipsis'>{{$value.address}}</p>
+					</div>	
+			</li>
+		{{/each}}
+	</script>
+</body>
+
+</html>
