@@ -7,8 +7,15 @@ var price = 1;
 var num = 1;
 var html = "";
 var This = null;
-$(function () {
 
+$(function () {
+	$('body').on('tap', 'a', function(){
+
+		mui.openWindow({
+			url: $(this).attr('href')
+		});
+
+	});
 	// 上拉刷新加载页面
 	mui.init({
 		pullRefresh: {
